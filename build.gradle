@@ -41,3 +41,16 @@ teacon {
 
     // use './gradlew -q printModMeta > src/main/resources/META-INF/mods.toml' to generate mod meta
 }
+repositories {
+    maven {
+        // JEI
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+}
+
+dependencies {
+    compileOnly fg.deobf("mezz.jei:jei-1.18.2-forge-api:${jei_version}")
+    runtimeOnly fg.deobf("mezz.jei:jei-1.18.2-forge:${jei_version}")
+
+}
